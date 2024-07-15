@@ -9,13 +9,6 @@ document.getElementById('eventForm').addEventListener('submit', function(event) 
         "EventEndTime": document.getElementById('event-date').value + "T" + document.getElementById('event-end-time').value + ":00.000Z",
         "EntryPrice": document.getElementById('event-price').value,
         "HostID": 3 // Hardcoded for now
-
-        // "EventName": "event",
-        // "EventDesc": "its a cool event bro",
-        // "EventStartTime": "2024-12-13T12:00:00.000Z",
-        // "EventEndTime": "2024-12-13T16:00:00.000Z",
-        // "EntryPrice": 10.2,
-        // "HostID": 2
     };
     console.log(document.getElementById('event-date').value + document.getElementById('event-start-time').value);
     console.log(eventData);
@@ -37,6 +30,7 @@ document.getElementById('eventForm').addEventListener('submit', function(event) 
         // Handle successful response
         console.log('Success:', data);
         alert('Event created successfully!');
+        window.location.href = `http://localhost:3000/index.html`;
     })
     .catch(error => {
         // Handle errors

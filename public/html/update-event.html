@@ -22,6 +22,8 @@
         <button type="submit">Update Event</button>
     </form>
 
+    <a href="../index.html">Back to Events</a>
+
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             // Get the event ID from the URL
@@ -48,9 +50,9 @@
 
             function populateForm(event) {
                 document.getElementById('event-name').value = event.EventName;
-                document.getElementById('event-date').value = event.EventDate;
-                document.getElementById('event-start-time').value = event.EventStartTime;
-                document.getElementById('event-end-time').value = event.EventEndTime;
+                document.getElementById('event-date').value = event.EventStartTime.substr(0,10);
+                document.getElementById('event-start-time').value = event.EventStartTime.substr(11,12);
+                document.getElementById('event-end-time').value = event.EventEndTime.substr(11,12);
                 document.getElementById('event-description').value = event.EventDesc;
                 document.getElementById('event-price').value = event.EntryPrice;
             }
