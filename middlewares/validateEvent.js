@@ -9,7 +9,7 @@ const validateEvent = (req, res, next) => {
     EntryPrice: Joi.number().min(0).required(),
     HostID: Joi.number().min(1).required(),
   });
-
+console.log(req.body);
   const validation = schema.validate(req.body, { abortEarly: false }); // Validate request body
 
   if (validation.error) {
