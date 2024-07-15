@@ -15,15 +15,15 @@ async function fetchEvents() {
       const eventDescElement = document.createElement("p");
       eventDescElement.textContent = event.EventDesc;
 
-      const updateLink = document.createElement("a");
-      updateLink.textContent = "Update";
-      updateLink.href = `http://localhost:3000/html/update-event.html?id=${event.EventID}`;
+      const displayLink = document.createElement("a");
+      displayLink.textContent = "View";
+      displayLink.href = `http://localhost:3000/html/display-event.html?id=${event.EventID}`;
   
       // ... add more elements for other event data (optional)
   
       eventItem.appendChild(eventNameElement);
       eventItem.appendChild(eventDescElement);
-      eventItem.appendChild(updateLink);
+      eventItem.appendChild(displayLink);
       // ... append other elements
   
       eventList.appendChild(eventItem);

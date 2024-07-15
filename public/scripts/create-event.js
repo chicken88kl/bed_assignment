@@ -1,6 +1,4 @@
-console.log("Create event script loaded");
 document.getElementById('eventForm').addEventListener('submit', function(event) {
-    console.log("Create event script loaded pt 2 electric boogaloo");
     event.preventDefault(); // Prevent the default form submission
 
     // Gather form data

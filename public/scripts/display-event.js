@@ -39,6 +39,10 @@
                 const eventHostIdElement = document.createElement("p");
                 eventHostIdElement.textContent = `Host ID: ${event.HostID}`;
 
+                const editLink = document.createElement("a");
+                editLink.textContent = "Edit";
+                editLink.href = `http://localhost:3000/html/update-event.html?id=${eventId}`;
+
                 // Append elements to the event item
                 eventItem.appendChild(eventNameElement);
                 eventItem.appendChild(eventDescElement);
@@ -46,6 +50,7 @@
                 eventItem.appendChild(eventEndTimeElement);
                 eventItem.appendChild(eventEntryPriceElement);
                 eventItem.appendChild(eventHostIdElement);
+                eventItem.appendChild(editLink);
 
                 // Append the event item to the event details container
                 eventDetails.appendChild(eventItem);
