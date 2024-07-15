@@ -67,7 +67,8 @@
                     EventStartTime: document.getElementById('event-start-time').value,
                     EventEndTime: document.getElementById('event-end-time').value,
                     EventDesc: document.getElementById('event-description').value,
-                    EntryPrice: document.getElementById('event-price').value
+                    EntryPrice: document.getElementById('event-price').value,
+                    HostID: 3
                 };
 
                 try {
@@ -84,6 +85,7 @@
                     }
 
                     alert('Event updated successfully');
+                    window.location.href = '/html/display-event.html?id=' + eventId;
                 } catch (error) {
                     console.error('Failed to update event:', error);
                 }

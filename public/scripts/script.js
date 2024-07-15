@@ -72,4 +72,3 @@ async function fetchEvents() {
   //   });
   // }
   
-  fetchEvents(); // Call the function to fetch and display event data
